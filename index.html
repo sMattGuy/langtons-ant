@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		 <meta charset="utf-8" />
+		 <title>Langton's Ant</title>
+		 <link rel="stylesheet" href="./style.css">
+	</head>
+	<body>
+		<h1>Langton's Ant</h1>
+		<canvas id="myCanvas" width="500" height="500"></canvas>
+			<p>Options</p>
+			<div class="sliders">
+				<p>Start?</p>
+				<input type="checkbox" id="startGame" name="startGame" value="false">
+				<p>Clear?</p>
+				<button type="button" id="drawClear" name="drawClear">Yes.</button>
+				<p>Max Speed: <span id="speedDisplay"></span></p>
+				<input type="range" min="0" max="100" value="10" id="maxSpeed">
+			</div>
+			<p>Canvas Settings</p>
+			<div class="sliders">
+				<p>Canvas Width: <span id="widthDisplay"></span></p>
+				<input type="range" min="100" max="1600" value="500" id="maxWidth" step="10">
+				<p>Canvas Height: <span id="heightDisplay"></span></p>
+				<input type="range" min="100" max="900" value="500" id="maxHeight" step="10">
+			</div>
+		<script src="./script.js" onload="init()"></script>
+	</body>
+</html>
