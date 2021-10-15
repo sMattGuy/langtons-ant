@@ -12,7 +12,7 @@ class Ant{
 		this.yPos = yPos;
 	}
 }
-let ant = new Ant(25,25);
+let ant;
 //sliders
 //boid modifiers
 let speedSlider = document.getElementById("maxSpeed");
@@ -84,6 +84,9 @@ function createArray(){
 		}
 	}
 	iteration = 0;
+	ant.xPos = Math.floor(Math.floor(FIELDX/TILESIZE)/2);
+	ant.yPos = Math.floor(Math.floor(FIELDY/TILESIZE)/2);
+	drawArray[ant.xPos][ant.yPos] = {'ant':1,'color':0};
 }
 
 //frames
@@ -118,6 +121,7 @@ async function doFrames() {
 	it creates the initial units and triggers the frames
 */
 function init(){
+	ant = new Ant(25,25);
 	createArray();
 	doFrames();
 }
@@ -151,7 +155,7 @@ function draw(){
 			}
 		}
 	}
-	ctx.fillStyle = "black";
+	ctx.fillStyle = "red";
 	ctx.font = `12px Tahoma`;
 	ctx.fillText(`Step:${iteration}`,0,10);
 }
