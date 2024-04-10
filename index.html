@@ -16,6 +16,8 @@
 				<button type="button" id="drawClear" name="drawClear">Yes.</button>
 				<p>Max Speed: <span id="speedDisplay"></span></p>
 				<input type="range" min="0" max="10" value="5" id="maxSpeed">
+				<p>Ants: <span id="antDisplay"></span></p>
+				<input type="range" min="1" max="100" value="1" id="maxAnts">
 			</div>
 			<p>Canvas Settings</p>
 			<div class="sliders">
@@ -23,6 +25,10 @@
 				<input type="range" min="100" max="1600" value="500" id="maxWidth" step="10">
 				<p>Canvas Height: <span id="heightDisplay"></span></p>
 				<input type="range" min="100" max="900" value="500" id="maxHeight" step="10">
+				<p>Grid?</p>
+				<input type="checkbox" id="showGrid" name="showGrid" value="true" checked="true">
+				<p>Tile Size: <span id="tileDisplay"></span></p>
+				<input type="range" min="1" max="20" value="10" id="maxTile" step="1">
 			</div>
 		<script src="./script.js" onload="init()"></script>
 	</body>
